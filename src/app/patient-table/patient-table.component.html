@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Type of Service</th>
+        <th>General Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients" [appHighlightRows]="patient">
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.dob | customDate }}</td>
+        <td>{{ patient.gender }}</td>
+        <td>{{ patient.serviceType }}</td>
+        <td>{{ patient.comments }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
